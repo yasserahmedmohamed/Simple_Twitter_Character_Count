@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Simple twitter Character Count"
 include(":app")
-include(":twitterCharCounter:presentation")
+include(":twittercounterandtweet")
