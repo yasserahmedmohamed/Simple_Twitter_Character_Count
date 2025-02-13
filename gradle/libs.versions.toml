@@ -15,8 +15,8 @@ jetbrains-kotlin-jvm = "1.8.10"
 hilt = "2.51.1"
 hiltNavigationCompose = "1.2.0"
 devtools = "1.9.10-1.0.13"
-
-
+retrofit = "2.9.0"
+okhttp3 = "4.9.0"
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -39,6 +39,21 @@ kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-
 hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
+
+
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+
+retrofit-okhttp3 = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp3" }
+retrofit-okhttp3-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp3" }
+
+[bundles]
+retrofit = [
+    "retrofit",
+    "retrofit-gson",
+    "retrofit-okhttp3",
+    "retrofit-okhttp3-interceptor",
+]
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
