@@ -22,7 +22,7 @@ object AppModule {
                     consumerKey = BuildConfig.TwitterAPIKey,
                     consumerSecret = BuildConfig.TwitterAPIKeySecret,
                     accessToken =BuildConfig.TwitterAccessToken ,
-                    accessSecret = BuildConfig.TwitterAccessTokenSecret
+                    accessTokenSecret = BuildConfig.TwitterAccessTokenSecret
                 )
             )
             .build()
