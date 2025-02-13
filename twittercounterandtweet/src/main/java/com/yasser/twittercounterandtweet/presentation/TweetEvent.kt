@@ -1,4 +1,7 @@
 package com.yasser.twittercounterandtweet.presentation
 
-class TweetEvent {
+sealed class TweetEvent {
+    data class OnTweetChanged(val tweet: String) : TweetEvent()
+    data object OnTweetSubmit : TweetEvent()
+    data object OnClearClicked : TweetEvent()
 }

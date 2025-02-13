@@ -1,3 +1,10 @@
 <resources>
-
+<string name="title">Twitter character count</string>
+<string name="char_type">Characters Typed</string>
+<string name="char_remaining">Characters Remaining</string>
+<string name="char_count">280</string>
+<string name="tweet_label">Start typing! You can enter up to 280 characters</string>
+<string name="copy_text">Copy Text</string>
+<string name="clear_text">Clear Text</string>
+<string name="post_tweet">Post Tweet</string>
 </resources>

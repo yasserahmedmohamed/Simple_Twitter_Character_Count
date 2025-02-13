@@ -1,8 +1,9 @@
 package com.yasser.twittercounterandtweet.domain.useCase
 
 import java.util.regex.Pattern
+import javax.inject.Inject
 
-class TwitterCharacterCountUseCase {
+class TwitterCharacterCountUseCase @Inject constructor() {
     operator fun invoke(text: String): Int {
         val urlPattern = Pattern.compile(
             "(https?://)?(www\\.)?[a-zA-Z0-9\\-]+(\\.[a-zA-Z]{2,})+(/[a-zA-Z0-9#\\-_/?.=]*)?",

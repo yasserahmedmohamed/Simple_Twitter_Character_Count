@@ -5,10 +5,13 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.yasser.twittercounterandtweet.presentation.TweetScreen
+import com.yasser.twittercounterandtweet.presentation.TweetScreenViewModel
 
 @Composable
 fun AppGraph(
@@ -30,7 +33,13 @@ fun AppGraph(
         }
 
         composable<Route.TweetScreen>{
-            TweetScreen()
+            val viewModel: TweetScreenViewModel = hiltViewModel()
+            TweetScreen(
+                tweetState = viewModel.state.collectAsStateWithLifecycle().value,
+                onTweetEvent =  viewModel::handleEvent
+            ){
+                navController.popBackStack()
+            }
         }
 
 

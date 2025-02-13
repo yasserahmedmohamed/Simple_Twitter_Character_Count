@@ -1,4 +1,6 @@
 package com.yasser.twittercounterandtweet.presentation
 
-class TweetState {
-}
+data class TweetState (
+    val tweet: String = "",
+    val characterCount: Int = 0
+)
